@@ -31,7 +31,6 @@ from flask import Flask, jsonify, request, make_response
 from estrutura_banco_de_dados import Autor,Postagem,app,db
 import jwt
 from datetime import datetime,timedelta
-import os
 from functools import wraps
 
 
@@ -215,5 +214,4 @@ def excluir_autor(autor,indice):
     return jsonify({'mensagem': 'Autor excluído com sucesso!'})
 
 # Rodar o servidor do flask
-if __name__ == '__main__':
-    app.run(port=5000, host='localhost', debug=True)
+app.run(port=5000, host='localhost', debug=True)
